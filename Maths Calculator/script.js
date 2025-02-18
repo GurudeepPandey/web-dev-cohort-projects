@@ -28,7 +28,7 @@ buttons.forEach((button) => {
     });
 });
 
-// calculate result
+// calculate results
 function calculateResult() {
     equalPressed = 1;
     if (!input.value) {
