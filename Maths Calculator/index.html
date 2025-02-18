@@ -1,42 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <!-- First big container -->
     <div class="container">
 
-        <div class="displayDiv">
-            <input type="text" name="" id="display">
+        <!-- Topbar container -->
+        <div class="topbar">
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <button class="clbtn">Clear</button>
+                <button class="hisbtn">History</button>
+            </div>
         </div>
 
-        <div class="buttonDiv">
-            <input type="button" value="AC" id="clear">
-            <input type="button" value="DEL" id="delete">
+        <!-- Calculator container -->
+        <div class="calcont">
 
-            <input type="button" value="/" class="buttons">
-            <input type="button" value="*" class="buttons">
-            <input type="button" value="7" class="buttons">
-            <input type="button" value="8" class="buttons">
-            <input type="button" value="9" class="buttons">
-            <input type="button" value="-" class="buttons">
-            <input type="button" value="4" class="buttons">
-            <input type="button" value="5" class="buttons">
-            <input type="button" value="6" class="buttons">
-            <input type="button" value="+" class="buttons">
-            <input type="button" value="1" class="buttons">
-            <input type="button" value="2" class="buttons">
-            <input type="button" value="3" class="buttons">
+            <!-- Display container -->
+            <div class="displayDiv">
+                <input type="text" id="display" placeholder="0">
+            </div>
 
-            <input type="button" value="=" id="equal">
+            <!-- Button container -->
+            <div class="buttonDiv">
+                <input type="button" value="AC" id="clear" class="orangebtn">
+                <input type="button" value="DEL" class="orangebtn">
 
-            <input type="button" value="0" class="buttons">
-            <input type="button" value="." class="buttons">
+                <input type="button" value="/" class="orangebtn">
+                <input type="button" value="*" class="orangebtn">
+                <input type="button" value="7">
+                <input type="button" value="8">
+                <input type="button" value="9">
+                <input type="button" value="-" class="orangebtn">
+                <input type="button" value="4">
+                <input type="button" value="5">
+                <input type="button" value="6">
+                <input type="button" value="+" class="orangebtn">
+                <input type="button" value="1">
+                <input type="button" value="2">
+                <input type="button" value="3">
+                <input type="button" value="=" class="orangebtn">
+                <input type="button" value="0">
+                <div>
+                    <input type="button" value=")">
+                    <input type="button" value="(">
+                </div>
+                <input type="button" value=".">
 
+            </div>
         </div>
+
+        <!-- History container -->
+        <div class="hiscont"></div>
     </div>
 </body>
+<script src="./script.js"></script>
 </html>

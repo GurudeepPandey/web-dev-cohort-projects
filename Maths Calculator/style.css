@@ -7,7 +7,7 @@
 html, body {
     width: 100%;
     height: 100%;
-    background-color: rgb(218, 237, 237);
+    background-color: #ebe9e9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,9 +15,10 @@ html, body {
 
 .container {
     width: 370px;
-    padding: 30px 20px ;
-    background-color: aqua;
+    padding: 10px 20px 30px 20px;
     border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 #display {
@@ -29,6 +30,9 @@ html, body {
     outline: none;
     border-radius: 5px;
     font-size: 23px;
+    letter-spacing: 2px;
+    background-color: #ebe9e9;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .buttonDiv {
@@ -44,18 +48,62 @@ input[type="button"] {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 5px;
     border: none;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     transition: all 0.5s;
 }
 
-#equal {
+.orangebtn {
+    background-color: orange;
+    color: #fff;
+}
+.orangebtn:hover {
+    background-color: rgb(239, 126, 39);
+    transform: scale(1.1);
+}
+input[type="button"]:hover {
+    transform: scale(1.1);
+}
+input[type="button"][value="="] {
     grid-row: span 2;
 }
 
-input[ type="button" ][value="0"] {
-    grid-column: span 2;
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.topbar div {
+    display: flex;
+    gap: 5px;
+}
+.topbar div div {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+}
+.topbar div div:nth-child(1) {
+    background-color: red;
+}
+.topbar div div:nth-child(2) {
+    background-color: orange;
+}
+.topbar div div:nth-child(3) {
+    background-color: green;
 }
 
-input[type="button"]:hover {
-    background-color: blue;
-    transform: scale(1.1);
+.hiscont {
+    display: none;
+}
+.hisbtn, .clbtn{
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: orange;
+    font-size: 15px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.clbtn {
+    display: none;
 }
