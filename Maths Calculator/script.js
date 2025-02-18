@@ -3,6 +3,7 @@ let buttons = document.querySelectorAll("input[type='button']");
 
 let operation = ["+", "-", "*", "/"];
 let historyArray = JSON.parse(localStorage.getItem("calcHistory")) || [];
+let equalPressed = 0;
 
 // Add event listener to buttons
 buttons.forEach((button) => {
@@ -12,20 +13,12 @@ buttons.forEach((button) => {
         } else if (button.value == "DEL") {
             input.value = input.value.slice(0, -1);
         } else if (button.value == "=") {
-            if (!input.value) {
-                alert("Please enter a value");
-            } else {
-                try {
-                    let s = eval(input.value);
-                    saveCalculation(input.value, s);
-                    displayHistory();
-                    input.value = String(s).length > 5 ? s.toFixed(2) : s;
-                } catch {
-                    alert("Invalid Expression");
-                    input.value = "";
-                }
-            }
+            calculateResult();
         } else {
+            if(equalPressed == 1) {
+                input.value = "";
+                equalPressed = 0;
+            }
             if (operation.includes(input.value.slice(-1)) && operation.includes(button.value)) {
                 alert("Don't repeat operations");
             } else {
@@ -33,6 +26,31 @@ buttons.forEach((button) => {
             }
         }
     });
+});
+
+// calculate result
+function calculateResult() {
+    equalPressed = 1;
+    if (!input.value) {
+        alert("Please enter a value");
+    } else {
+        try {
+            let s = eval(input.value);
+            saveCalculation(input.value, s);
+            displayHistory();
+            input.value = String(s).length > 5 ? s.toFixed(2) : s;
+        } catch {
+            alert("Invalid Expression");
+            input.value = "";
+        }
+    }
+}
+
+// When we press keyboard enter button to calculate
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        calculateResult();
+    }
 });
 
 // variables to hold references
