@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f8f8;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 370px;
+    padding-bottom: 20px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border: 2px solid black;
+}
+
+.container h2 {
+    padding: 8px 3px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    background: linear-gradient(to right, #f12711, #f5af19);
+    border-top-left-radius: 50px;
+}
+
+.container div {
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(245, 175, 25, 0.5);
+}
+input[type="number"]:focus {
+    border: 1px solid black;
+}
+
+#submitbtn, .closebtn {
+    padding: 6px 10px;
+    font-size: 20px;
+    border-radius: 7px;
+    background-color: rgba(241, 39, 17, 0.7);
+    color: #fff;
+    border: none;
+}
+
+#submitbtn:hover, .closebtn:hover {
+    background-color: rgba(241, 39, 17, 1);
+    cursor: pointer;
+}
+
+#result {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#result .image {
+    width: 200px;
+}
+#result p {
+    font-size: 18px;
+}
+#result .bmiVal {
+    font-size: 23px;
+}
+#result .desc {
+    font-size: 27px;
+    font-weight: bold;
+}
