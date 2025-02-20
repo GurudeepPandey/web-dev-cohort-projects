@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #ebe9e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px 2px;
+}
+h1 {
+    font-size: 2.6rem;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: blue;
+    text-shadow: 1px 5px 3px rgba(0, 0, 0, 0.2);
+}
+.main {
+    max-width: 1000px;
+    padding: 30px 20px;
+    display: flex;
+    gap: 20px;
+    background-color: #d4d4d4;
+    border-radius: 10px;
+}
+.formBox {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.formBox div {
+    width: 100%;
+}
+.formBox div div {
+    font-weight: 550;
+    margin-bottom: 3px;
+}
+input[type="text"], textarea {
+    width: 100%;
+    padding: 7px 5px;
+    border-radius: 5px;
+    border: 1px solid #a79e9e;
+    outline: none;
+    font-size: 0.9rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+input[type="text"]:focus, textarea:focus {
+    border: 2px solid #1c46ed;
+}
+textarea {
+    resize: vertical;
+}
+.starBox {
+    width: 100%;
+    background-color: #fff;
+    padding: 7px 5px;
+    border-radius: 5px;
+    border: 1px solid #a79e9e;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+.starBox div {
+    width: 40px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #000;
+}
+button {
+    width: 100%;
+    padding: 7px 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1c46ed;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-size: 1.1rem;
+}
+button:hover {
+    background-color: #0f3bb9;
+}
+
+
+.reviewBox {
+    width: 60%;
+}
+ h2 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: blue;
+    text-shadow: 1px 5px 3px rgba(0, 0, 0, 0.2);
+}
+.reviewInnerCont > div {
+    padding: 4px 6px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #b5b8bf;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    margin-bottom: 20px;
+}
+.reviewInnerCont > div h3 {
+    font-size: 1.35rem;
+}
+.reviewInnerCont > div p {
+    text-align: justify;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+.reviewInnerCont > div > div {
+    font-size: 1.4rem;
+    font-weight: 550;
+    -webkit-text-stroke: 1px yellow;
+}
+.reviewInnerCont > div > h4 {
+    font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 10px 20px;
+        padding-bottom: 100px;
+        display: block;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    .main {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .formBox {
+        width: 100%;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    .reviewBox {
+        width: 100%;
+    }
+}

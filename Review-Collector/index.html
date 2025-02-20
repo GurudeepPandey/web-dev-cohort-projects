@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Collector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Share Your Experience</h1>
+    <div class="main">
+        <div class="formBox">
+            <h2>Form Fillup</h2>
+            <div>
+                <div>Name:</div>
+                <input type="text" name="name" id="name" required maxlength="20" placeholder="Enter your name">
+            </div>
+            <div>
+                <div>Title:</div>
+                <input type="text" name="title" id="title" required maxlength="20" placeholder="Title for review">
+            </div>
+            <div>
+                <div>Your Review:</div>
+                <textarea name="review" id="review" rows="8" placeholder="Give your review"></textarea>
+            </div>
+
+            <div>
+                <div>Leave your rating</div>
+                <div class="starBox">
+                    <div id="star1" class="star">★</div>
+                    <div id="star2" class="star">★</div>
+                    <div id="star3" class="star">★</div>
+                    <div id="star4" class="star">★</div>
+                    <div id="star5" class="star">★</div>
+                </div>
+            </div>
+            
+            <button type="submit" id="submit">Submit</button>
+        </div>
+
+
+        <div class="reviewBox">
+            <h2>Published Rating & Reviews</h2>
+            <div class="reviewInnerCont">
+                <div>
+                    <h3>Title: Template</h3>
+                    <div>★★★★★</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptates vitae odit commodi impedit minima dolorem, enim quaerat quia deleniti.</p>
+                    <h4>~Name: John Doe</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
