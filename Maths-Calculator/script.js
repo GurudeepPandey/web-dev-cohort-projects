@@ -74,6 +74,7 @@ hisbtn.addEventListener("click", () => {
         hisbtn.textContent = "History";
         hisbtnPress = 0;
     }
+    displayHistory()
 });
 
 // Save calculation
@@ -87,12 +88,22 @@ function displayHistory() {
     historyCont.innerHTML = historyArray.map(calc => `<p>${calc}</p>`).join("");
 }
 
-// Load history when the page loads
-window.addEventListener("load", displayHistory);
-
 // Clear history
 document.querySelector(".clbtn").addEventListener("click", () => {
     historyArray = [];
     localStorage.removeItem("calcHistory");
     historyCont.innerHTML = "";
+});
+
+// This code is added to stop the user to enter characters other than numbers
+document.addEventListener("keydown", function (event) {
+    const allowedKeys = ["Enter", "Backspace", "Delete", ".", "+", "-", "=", "*", "/"];
+
+    if ((event.key >= "0" && event.key <= "9") || (event.keyCode >= 96 && event.keyCode <= 105)) {
+        return;
+    }
+    if (allowedKeys.includes(event.key)) {
+        return;
+    }
+    event.preventDefault();
 });
