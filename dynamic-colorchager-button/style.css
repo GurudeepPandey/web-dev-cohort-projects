@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #ebe9e9;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h2 {
+    padding-top: 30px;
+    font-size: 2.3rem;
+    font-weight: 800;
+    margin-bottom: 50px;
+    text-shadow: 1px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    margin: auto;
+    max-width: 400px;
+    background-color: blanchedalmond;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2)
+}
+
+.container p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.input-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+select, button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+button {
+    background-color: salmon;
+    color: #fff;
+    font-weight: bolder;
+}
+button:hover {
+    transform: scale(1.05);
+}
+
+.btn-cont {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
